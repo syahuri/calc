@@ -1,0 +1,13 @@
+services:
+  calc:
+    build: .
+    container_name: calc
+    restart: unless-stopped
+    ports:
+      - "8084:80"
+    networks:
+      - npm_default
+
+networks:
+  npm_default:
+    external: true

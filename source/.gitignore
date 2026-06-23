@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Database
+*.sql
+*.sql.gz
+database/
+!database/.gitkeep
+
+# Uploads / media
+uploads/
+wp-content/uploads/
+public/uploads/
+
+# WordPress
+wp_data/
+!wp_data/wp-content/plugins/
+!wp_data/wp-content/themes/
+
+# Cache
+wp-content/cache/
+*.log
+
+# Docker
+.env
+docker-compose.override.yml
+
+# Backups
+backups/
+*.tar.gz
+
+# OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build
+dist/
+build/
+*.transpiled.js

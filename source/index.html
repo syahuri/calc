@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videotron Calculator - ELKIFAH PRODUCTION</title>
+    <meta name="description"
+        content="Technical Logistics Calculator for Videotron Installations by ELKIFAH PRODUCTION. Calculate cabinets, power, and logistics efficiently.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+</head>
+
+<body>
+    <!-- Initial Loader -->
+    <div id="loader-screen"
+        class="fixed inset-0 bg-[#050a14] z-[100] flex flex-col items-center justify-center transition-opacity duration-700">
+        <div class="space-y-6 text-center">
+            <h1 class="text-2xl font-black text-white tracking-widest uppercase">
+                ELKIFAH <span class="text-blue-500">PRODUCTION</span>
+            </h1>
+            <div class="flex flex-col items-center gap-3">
+                <div class="loader"></div>
+                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em]">Initializing Calculator...
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- React Root -->
+    <div id="root"></div>
+
+    <!-- Application Logic -->
+    <script src="app.transpiled.js?v=12"></script>
+
+    <script>
+        // Simple loader handler
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader-screen');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.remove(), 700);
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
