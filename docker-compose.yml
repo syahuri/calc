@@ -1,6 +1,6 @@
 # =============================================================================
-# Calc — Videotron Calculator
-# React + nginx, no database
+# Calc — Videotron Calculator (ELKIFAH PRODUCTION)
+# React (Babel-transpiled) + nginx, no database
 # =============================================================================
 services:
   calc:
@@ -9,9 +9,16 @@ services:
       dockerfile: Dockerfile
     container_name: calc
     restart: unless-stopped
+    env_file: .env
     networks:
-      - npm_default
+      - coolify
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+        reservations:
+          memory: 64M
 
 networks:
-  npm_default:
+  coolify:
     external: true
